@@ -7,7 +7,7 @@
  {
      /**
       * @test
-      *@dataProvider factors
+      * @dataProvider factors
       */
      public function it_generates_prime_factor($number, $expected)
      {
