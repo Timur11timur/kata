@@ -11,7 +11,7 @@
       */
      public function it_generates_prime_factor($number, $expected)
      {
-         $factors = new PrimeFactors;
+         $factors = new PrimeFactors();
 
          $this->assertEquals($expected, $factors->generate($number));
      }
