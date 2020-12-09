@@ -139,6 +139,6 @@
              $bowling->roll(10);
          }
 
-         $this->assertSame(320, $bowling->score());
+         $this->assertSame(300, $bowling->score());
      }
  }
