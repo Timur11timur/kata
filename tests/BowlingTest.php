@@ -74,6 +74,27 @@
      /**
       * @test
       */
+     public function it_awards_a_two_roll_bonus_for_strike_and_strik_again()
+     {
+         $bowling = new Bowling();
+
+         $bowling->roll(10); //strike
+
+         $bowling->roll(10); //strike
+
+         $bowling->roll(3);
+         $bowling->roll(2);
+
+         foreach (range(1, 14) as $roll) {
+             $bowling->roll(0);
+         }
+
+         $this->assertSame(43, $bowling->score());
+     }
+
+     /**
+      * @test
+      */
      public function a_spare_on_the_final_frame_grans_one_extra_ball()
      {
          $bowling = new Bowling();
@@ -108,7 +129,6 @@
          $this->assertSame(26, $bowling->score());
      }
 
-
      /**
       * @test
       */
@@ -131,7 +151,7 @@
      /**
       * @test
       */
-     public function it_scoresa_perfect_game()
+     public function it_scores_a_perfect_game()
      {
          $bowling = new Bowling();
 
